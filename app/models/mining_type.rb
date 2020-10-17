@@ -8,4 +8,6 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
-class MiningType < A
+class MiningType < ApplicationRecord
+  has_many :coins
+end
