@@ -1,0 +1,1 @@
+$('#coin-<%= Coin.find_by(acronym: params[:acronym]).id %>').html(" <%= j render '/coins/coin_value', coin: Coin.find_by(acronym: params[:acronym]) %> ");

@@ -39,4 +39,12 @@
 
 <script>
   value_form = document.querySelectorAll("#value-form");
-  const interval = setInterv
+  const interval = setInterval(function() {
+    for (var i = 0; i < value_form.length; i++){
+      // console.log(value_form[i].innerHTML);
+      console.log(i)
+      // Rails.fire(value_form[i], 'submit')
+      Rails.handleRemote.call(value_form[i])
+    }
+  }, 15000);
+</script>
