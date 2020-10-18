@@ -9,4 +9,19 @@
       <th class="coin-image"><%= t('activerecord.attributes.coin.image') %></th>
       <th><%= t('activerecord.attributes.coin.description') %> </th>
       <th><%= t('activerecord.attributes.coin.acronym') %></th>
-      <th><%= t('activerecord.attributes.coin.value') %></th
+      <th><%= t('activerecord.attributes.coin.value') %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coins.each do |coin| %>
+      <tr>
+        <td><img src="<%= coin.url_image %> "width=35 height=35 /></td>
+        <td><%= coin.description %></td>
+        <td><%= coin.acronym %></td>
+        <td id="coin-<%= coin.id %>"><%= render "coin_value", coin: coin %>
+          <%= form_tag(coins_path, method: :get , id: "value-form", remote: true) do %>
+            <%= hidden_field_tag "acronym", "#{coin.acronym}"%>
+          <% end %></td>
+        <t
