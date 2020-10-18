@@ -29,4 +29,12 @@
 
   <div class="form-group">
     <%= form.label :mining_type %>
-    <%= form.select("mining_type_id", @mining_types_option, {include_blank: t('select')}, cla
+    <%= form.select("mining_type_id", @mining_types_option, {include_blank: t('select')}, class: "form-control" ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit nil, class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<br>
