@@ -24,4 +24,19 @@
           <%= form_tag(coins_path, method: :get , id: "value-form", remote: true) do %>
             <%= hidden_field_tag "acronym", "#{coin.acronym}"%>
           <% end %></td>
-        <t
+        <td><%= link_to t('links.show'), coin %></td>
+        <td><%= link_to t('links.edit'), edit_coin_path(coin) %></td>
+        <td><%= link_to t('links.delete'), coin, method: :delete, data: { confirm: 'You sure bout dat?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('new.coin'), new_coin_path, class:"btn btn-primary" %>
+<%= link_to t('links.back'), root_path, class:"btn btn-secondary" %>
+
+<script>
+  value_form = document.querySelectorAll("#value-form");
+  const interval = setInterv
