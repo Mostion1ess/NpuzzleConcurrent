@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<form>
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil, @coin.description, class:"form-control", disabled: true  %>
+  </div>
+
+  <div class="form-g

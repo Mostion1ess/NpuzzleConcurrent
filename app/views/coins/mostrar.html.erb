@@ -2,4 +2,18 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @c
+  <%= @coin.description %>
+</p>
+
+<p>
+  <strong>Acronym:</strong>
+  <%= @coin.acronym %>
+</p>
+
+<p>
+  <strong>Url image:</strong>
+  <%= image_tag @coin.url_image, width: 30, height: 30 %>
+</p>
+
+<%= link_to 'Edit', edit_coin_path(@coin) %> |
+<%= link_to 'Back', coins_path %>
