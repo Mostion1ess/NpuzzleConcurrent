@@ -1,0 +1,31 @@
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-4"><%= t('welcome') %></h1>
+      <p class="lead"><%= t('lead') %></p>
+      <hr class="my-4">
+      <p><%= t('info') %> </p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/coins" role="button"><%= t('coin') %></a>
+        <a class="btn btn-primary btn-lg" href="/mining_types" role="button"><%= t('mining_type') %></a>
+      </p>
+    </div>
+
+    <div class="col mt-3">
+      <ul class="nav justify-content-end">
+        <div class="input-group justify-content-end">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01"><%= t('language') %></label>
+          </div>
+          <form action="#" method="get" id="language" remote="true">
+            <select name="locale" onchange="this.form.submit()" class="custom-select" id="inputGroupSelect01">
+              <option value="en" <%= 'selected' if I18n.locale == :'en' %>>English</option>
+              <option value="pt-BR" <%= 'selected' if I18n.locale == :'pt-BR' %>>Portugues</option>
+            </select>
+          </form>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
