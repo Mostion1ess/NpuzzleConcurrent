@@ -8,4 +8,28 @@ module.exports = function(api) {
   if (!validEnv.includes(currentEnv)) {
     throw new Error(
       'Please specify a valid `NODE_ENV` or ' +
-        '`BABEL_ENV` environment variables. Vali
+        '`BABEL_ENV` environment variables. Valid values are "development", ' +
+        '"test", and "production". Instead, received: ' +
+        JSON.stringify(currentEnv) +
+        '.'
+    )
+  }
+
+  return {
+    presets: [
+      isTestEnv && [
+        '@babel/preset-env',
+        {
+          targets: {
+            node: 'current'
+          }
+        }
+      ],
+      (isProductionEnv || isDevelopmentEnv) && [
+        '@babel/preset-env',
+        {
+          forceAllTransforms: true,
+          useBuiltIns: 'entry',
+          corejs: 3,
+          modules: false,
+  
