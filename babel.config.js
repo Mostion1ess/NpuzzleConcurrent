@@ -54,4 +54,29 @@ module.exports = function(api) {
         }
       ],
       [
-        '@b
+        '@babel/plugin-proposal-private-methods',
+        {
+          loose: true
+        }
+      ],
+      [
+        '@babel/plugin-proposal-private-property-in-object',
+        {
+          loose: true
+        }
+      ],
+      [
+        '@babel/plugin-transform-runtime',
+        {
+          helpers: false
+        }
+      ],
+      [
+        '@babel/plugin-transform-regenerator',
+        {
+          async: false
+        }
+      ]
+    ].filter(Boolean)
+  }
+}
