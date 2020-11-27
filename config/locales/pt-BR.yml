@@ -1,0 +1,24 @@
+
+'pt-BR':
+  welcome: Seja Bem-Vindo!
+  lead: Este é o Crypto Wallet.
+  info: Selecione uma das opções abaixo para começar.
+  language: Idioma
+  coin: Moedas
+  mining_type: Tipos de mineração
+  select: Selecione...
+  links:
+    edit: "Editar"
+    show: "Mostrar"
+    delete: "Apagar"
+    new: "Novo"
+    back: "Voltar"
+  new:
+    coin: "Nova Moeda"
+    mining_type: "Novo Tipo de Mineração"
+  editing:
+    coin: "Editando Moeda"
+    mining_type: "Editando Tipo de Mineração"
+  showing:
+    coin: "Mostrando Moeda"
+    mining_type: "Mostrando Tipo de Mineração"
