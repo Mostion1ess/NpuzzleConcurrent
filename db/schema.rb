@@ -33,4 +33,5 @@ ActiveRecord::Schema.define(version: 2022_01_19_134918) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "coins",
+  add_foreign_key "coins", "mining_types"
+end
