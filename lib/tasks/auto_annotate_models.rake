@@ -14,4 +14,16 @@ if Rails.env.development?
       'position_in_routes'          => 'before',
       'position_in_class'           => 'before',
       'position_in_test'            => 'before',
-      'position_in_fixture'       
+      'position_in_fixture'         => 'before',
+      'position_in_factory'         => 'before',
+      'position_in_serializer'      => 'before',
+      'show_foreign_keys'           => 'true',
+      'show_complete_foreign_keys'  => 'false',
+      'show_indexes'                => 'true',
+      'simple_indexes'              => 'false',
+      'model_dir'                   => 'app/models',
+      'root_dir'                    => '',
+      'include_version'             => 'false',
+      'require'                     => '',
+      'exclude_tests'               => 'false',
+      'exclude_fi
