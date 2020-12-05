@@ -26,4 +26,15 @@ if Rails.env.development?
       'include_version'             => 'false',
       'require'                     => '',
       'exclude_tests'               => 'false',
-      'exclude_fi
+      'exclude_fixtures'            => 'false',
+      'exclude_factories'           => 'false',
+      'exclude_serializers'         => 'false',
+      'exclude_scaffolds'           => 'true',
+      'exclude_controllers'         => 'true',
+      'exclude_helpers'             => 'true',
+      'exclude_sti_subclasses'      => 'false',
+      'ignore_model_sub_dir'        => 'false',
+      'ignore_columns'              => nil,
+      'ignore_routes'               => nil,
+      'ignore_unknown_models'       => 'false',
+      'hide_limit_column_types'     => 'in
