@@ -37,4 +37,16 @@ if Rails.env.development?
       'ignore_columns'              => nil,
       'ignore_routes'               => nil,
       'ignore_unknown_models'       => 'false',
-      'hide_limit_column_types'     => 'in
+      'hide_limit_column_types'     => 'integer,bigint,boolean',
+      'hide_default_column_types'   => 'json,jsonb,hstore',
+      'skip_on_db_migrate'          => 'false',
+      'format_bare'                 => 'true',
+      'format_rdoc'                 => 'false',
+      'format_yard'                 => 'false',
+      'format_markdown'             => 'false',
+      'sort'                        => 'false',
+      'force'                       => 'false',
+      'frozen'                      => 'false',
+      'classified_sort'             => 'true',
+      'trace'                       => 'false',
+      'wrapp
