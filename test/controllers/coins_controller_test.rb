@@ -17,4 +17,22 @@ class CoinsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create coin" do
     assert_difference('Coin.count') do
-      post coins_url, params: { coin: { a
+      post coins_url, params: { coin: { acronym: @coin.acronym, description: @coin.description, url_image: @coin.url_image } }
+    end
+
+    assert_redirected_to coin_url(Coin.last)
+  end
+
+  test "should show coin" do
+    get coin_url(@coin)
+    assert_response :success
+  end
+
+  test "should get edit" do
+    get edit_coin_url(@coin)
+    assert_response :success
+  end
+
+  test "should update coin" do
+    patch coin_url(@coin), params: { coin: { acronym: @coin.acronym, description: @coin.description, url_image: @coin.url_image } }
+    assert_redirected_to coin_url(@c
