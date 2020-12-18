@@ -33,4 +33,16 @@ class MiningTypesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should upda
+  test "should update mining_type" do
+    patch mining_type_url(@mining_type), params: { mining_type: { acronym: @mining_type.acronym, description: @mining_type.description } }
+    assert_redirected_to mining_type_url(@mining_type)
+  end
+
+  test "should destroy mining_type" do
+    assert_difference('MiningType.count', -1) do
+      delete mining_type_url(@mining_type)
+    end
+
+    assert_redirected_to mining_types_url
+  end
+end
