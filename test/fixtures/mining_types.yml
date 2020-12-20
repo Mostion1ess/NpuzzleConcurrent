@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: mining_types
+#
+#  id          :bigint           not null, primary key
+#  acronym     :string
+#  description :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+one:
+  description: MyString
+  acronym: MyString
+
+two:
+  description: MyString
+  acronym: MyString
