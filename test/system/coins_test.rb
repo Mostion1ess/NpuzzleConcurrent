@@ -7,4 +7,26 @@ class CoinsTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit coins_url
-   
+    assert_selector "h1", text: "Coins"
+  end
+
+  test "creating a Coin" do
+    visit coins_url
+    click_on "New Coin"
+
+    fill_in "Acronym", with: @coin.acronym
+    fill_in "Description", with: @coin.description
+    fill_in "Url image", with: @coin.url_image
+    click_on "Create Coin"
+
+    assert_text "Coin was successfully created"
+    click_on "Back"
+  end
+
+  test "updating a Coin" do
+    visit coins_url
+    click_on "Edit", match: :first
+
+    fill_in "Acronym", with: @coin.acronym
+    fill_in "Description", with: @coin.description
+    fill_in "Url image", with: @coi
