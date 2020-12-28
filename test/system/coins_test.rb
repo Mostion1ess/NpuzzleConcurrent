@@ -29,4 +29,19 @@ class CoinsTest < ApplicationSystemTestCase
 
     fill_in "Acronym", with: @coin.acronym
     fill_in "Description", with: @coin.description
-    fill_in "Url image", with: @coi
+    fill_in "Url image", with: @coin.url_image
+    click_on "Update Coin"
+
+    assert_text "Coin was successfully updated"
+    click_on "Back"
+  end
+
+  test "destroying a Coin" do
+    visit coins_url
+    page.accept_confirm do
+      click_on "Destroy", match: :first
+    end
+
+    assert_text "Coin was successfully destroyed"
+  end
+end
