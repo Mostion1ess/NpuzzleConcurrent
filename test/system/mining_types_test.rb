@@ -30,4 +30,16 @@ class MiningTypesTest < ApplicationSystemTestCase
     fill_in "Description", with: @mining_type.description
     click_on "Update Mining type"
 
-    assert_text 
+    assert_text "Mining type was successfully updated"
+    click_on "Back"
+  end
+
+  test "destroying a Mining type" do
+    visit mining_types_url
+    page.accept_confirm do
+      click_on "Destroy", match: :first
+    end
+
+    assert_text "Mining type was successfully destroyed"
+  end
+end
