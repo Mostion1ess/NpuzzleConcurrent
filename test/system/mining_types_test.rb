@@ -10,4 +10,24 @@ class MiningTypesTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Mining Types"
   end
 
-  test "creating a 
+  test "creating a Mining type" do
+    visit mining_types_url
+    click_on "New Mining Type"
+
+    fill_in "Acronym", with: @mining_type.acronym
+    fill_in "Description", with: @mining_type.description
+    click_on "Create Mining type"
+
+    assert_text "Mining type was successfully created"
+    click_on "Back"
+  end
+
+  test "updating a Mining type" do
+    visit mining_types_url
+    click_on "Edit", match: :first
+
+    fill_in "Acronym", with: @mining_type.acronym
+    fill_in "Description", with: @mining_type.description
+    click_on "Update Mining type"
+
+    assert_text 
