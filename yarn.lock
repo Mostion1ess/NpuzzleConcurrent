@@ -84,4 +84,12 @@
 
 "@babel/helper-create-regexp-features-plugin@^7.16.7":
   version "7.16.7"
-  resolved "https://registry.yarnpkg.com/@babel/helper-
+  resolved "https://registry.yarnpkg.com/@babel/helper-create-regexp-features-plugin/-/helper-create-regexp-features-plugin-7.16.7.tgz#0cb82b9bac358eb73bfbd73985a776bfa6b14d48"
+  integrity sha512-fk5A6ymfp+O5+p2yCkXAu5Kyj6v0xh0RBeNcAkYUMDvvAAoxvSKXn+Jb37t/yWFiQVDFK1ELpUTD8/aLhCPu+g==
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.16.7"
+    regexpu-core "^4.7.1"
+
+"@babel/helper-define-polyfill-provider@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.3.1.tgz#52411b445bdb2e676869e5a74960d2d382
