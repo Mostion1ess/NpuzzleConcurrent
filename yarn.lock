@@ -5324,4 +5324,16 @@ postcss-reduce-transforms@^4.0.2:
     cssnano-util-get-match "^4.0.0"
     has "^1.0.0"
     postcss "^7.0.0"
-    pos
+    postcss-value-parser "^3.0.0"
+
+postcss-replace-overflow-wrap@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-replace-overflow-wrap/-/postcss-replace-overflow-wrap-3.0.0.tgz#61b360ffdaedca84c7c918d2b0f0d0ea559ab01c"
+  integrity sha512-2T5hcEHArDT6X9+9dVSPQdo7QHzG4XKclFT8rU5TzJPDN7RIRTbO9c4drUISOVemLj03aezStHCR2AIcr8XLpw==
+  dependencies:
+    postcss "^7.0.2"
+
+postcss-safe-parser@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-safe-parser/-/postcss-safe-parser-4.0.2.tgz#a6d4e48f0f37d9f7c11b2a581bf00f8ba4870b96"
+  integr
